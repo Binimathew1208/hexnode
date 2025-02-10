@@ -1,0 +1,15 @@
+.platform {
+    .title {
+        margin-bottom: 3.33em;
+    }
+    .display-flex-div {
+        justify-content: space-between;
+        .plat-item {
+            width: 15%;
+            @include css3-prefix('transition','all 0.3s ease-in-out 0s');
+            &:hover { 
+                @include css3-prefix('transform','translateY(-0.25em)');
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+header {
+    background-color: #020a19;
+    @include css3-prefix('transition','all 0.2s ease-in-out 0s');
+    &:hover {
+        background-color: #fff;
+        .header-wrapper {
+            .logo {
+                svg {
+                    fill: #020a19;
+                    stroke: #020a19;
+                }
+            }
+        }
+    }
+    .header-wrapper {
+        position: relative;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        padding: 1em 0;
+        align-content: center;
+        .logo {
+            font-size: 2em;
+            svg {
+                fill: #fff;
+                stroke: #fff;
+            }
+        }
+        .only-mobile {
+            display: none;
+        }
+        .nav {
+            input, .login {
+                display: none;
+            }
+        }
+    }
+    &.sticky {
+        position: fixed;
+        background-color: #fff;
+        z-index: 999;
+        border-bottom: 1px solid #e5e7eb;
+        .header-wrapper {
+            .logo {
+                svg {
+                    fill: #020a19;
+                    stroke: #020a19;
+                }
+            }
+        }
+    }
+}
+.page-top{
+    margin-top: 6.67em;
+}

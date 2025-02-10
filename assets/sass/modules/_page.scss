@@ -1,0 +1,45 @@
+.wrapper {
+    width: 88%;
+    margin: 0 auto;
+    max-width: 1300px;
+}
+.btn-wrap {
+    background-color: $secondary-color;
+    border-radius: 3px;
+    border: 1px solid $secondary-color;
+    .button {
+        display: block;
+        background-color: transparent;
+        color: #fff;
+        padding: 0.55em 1.4em;
+        font-size: 0.8em;
+        line-height: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        border: 0;
+        &:hover {
+            .button {
+                background-color: #bb022a;
+            }
+        }
+    }
+}
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.title {
+    font-size: 2.22em;
+    color: #020a19;
+    font-weight: 700;
+    max-width: 900px;
+    text-align: center;
+    margin: auto;
+}
+.section-margin-top {
+    margin-top: 6.67em;
+}
+.section-margin-bottom {
+    margin-bottom: 6.67em;
+}

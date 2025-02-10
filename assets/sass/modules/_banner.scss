@@ -1,0 +1,94 @@
+.banner {
+    background-color: #020a19;
+    .display-flex-div {
+        justify-content: space-between;
+        align-items: center;
+        padding: 2em 0 0;
+        .left-content {
+            width: 40%;
+            max-width: 498px;
+            .banner-txt {
+                font-size: 2.3em;
+                line-height: 53px;
+                color: #fff;
+                font-weight: 700;
+                margin-bottom: 1.2em;
+            }
+            .form {
+                align-items: center;
+                padding: 0;
+            }
+        }
+        .right-img {
+            width: 46%;
+            max-width: 597px;
+        }
+    }
+}
+.banner-bottom {
+    padding: 1.67em 0;
+    background-color: #1a1c2b;
+    .display-flex-div {
+        justify-content: space-between;
+        .bottom-wrap {
+            width: 30%;
+            display: flex;
+            flex-flow: row;
+            justify-content: center;
+            &:first-child {
+                justify-content: left;
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 1px;
+                    height: 100%;
+                    background-color: #ffffff33;
+                    right: 0;
+                }
+                .items {
+                    .title-img {
+                        img {
+                            max-width: 85px;
+                        }
+                    }
+                }
+            }
+            &:last-child {
+                justify-content: end;
+                position: relative;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 1px;
+                    height: 100%;
+                    background-color: #ffffff33;
+                    left: 0;
+                }
+                .items {
+                    .title-img {
+                        img {
+                            max-width: 155px;
+                        }
+                    }
+                }
+            }
+            .items {
+                width: 71%;
+                &:hover { 
+                    @include css3-prefix('transform','translateY(-0.25em)');
+                }
+                .title-img {
+                    img {
+                        max-width: 105px;
+                    }
+                }
+                .text {
+                    color: #ffffff99;
+                    line-height: 22px;
+                    font-size: 0.77em;
+                }
+            }
+        }
+    }
+}

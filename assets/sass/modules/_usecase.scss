@@ -1,0 +1,149 @@
+.use-case {
+    .use-tab-wrapper {
+        padding: 3.33em 0 0;
+        .usecase-head {
+            .usecase-category {
+                display: inline-flex;
+                flex-flow: row;
+                width: 100%;
+                align-items: center;
+                overflow-x: auto;
+                white-space: nowrap;
+                li {
+                    width: 20%;
+                    text-align: center;
+                    transition-property: all;
+                    transition-timing-function: cubic-bezier(.4,0,.2,1);
+                    transition-duration: .6s;
+                    &:last-child {
+                        a {
+                            &:last-child {
+                                border-right: 1px solid #e5e7eb;
+                            }
+                        }
+                    }
+                    a {
+                        display: block;
+                        font-size: 1.22em;
+                        font-weight: 600;
+                        border-color: #e5e7eb;
+                        border-style: solid;
+                        border-width: 1px 0 1px 1px;
+                        padding: 1.44em 1.67em;
+                        &.active {
+                            background-color: #020a19;
+                            color: #fff;
+                            border: 0 solid #e5e7eb;
+                            border-radius: 4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+#usecase-slider {
+    visibility: hidden;
+    height: 100%;
+    background-color: #f7f7f7;
+    padding: 40px;
+    &.slick-initialized { 
+        visibility: visible; 
+        height: auto;
+    }
+    .slick-list {    
+        .slick-track {
+            .slick-slide {
+                display: block;
+                margin: 0;
+            }
+        }
+    }
+    .mobile-wrap {
+        .accordion-toggle {
+            display: none;
+        }
+    }
+    .usecase-item {
+        // overflow: hidden;
+        .display-flex-div {
+            &:hover {
+                .right {
+                    .case-img {
+                        img {
+                            @include css3-prefix('transform', 'scale(1.05)');
+                        }
+                    }
+                }
+            }
+            .left {
+                margin-right: 2.5em;
+                .title {
+                    text-align: left;
+                    padding-bottom: 2em;
+                    font-size: 1.53em;
+                    line-height: 40px;
+                }
+                ul {
+                    li {
+                        color: #333;
+                        margin-bottom: 1.38em;
+                        display: flex;
+                        flex-flow: row;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                        .tick {
+                            position: relative;
+                            display: inline-block;
+                            width: 24px;
+                            height: 24px;
+                            transform: rotate(45deg);
+                            margin: 0.1em 0.5em 0 0;
+                            &::before, &::after {
+                                background: #69c762;
+                                position: absolute;
+                                content: '';
+                                left: 30%;
+                                right: 30%;
+                                top: 50%;
+                                bottom: auto;
+                            }
+                            &::before {
+                                width: 1.5px;
+                                height: auto;
+                                bottom: 25%;
+                                top: 22%;
+                                left: 55%;
+                                right: auto;
+                            }
+                            &::after {
+                                height: 1.5px;
+                                bottom: 25%;
+                                left: 30%;
+                                right: 45%;
+                                top: auto;
+                            }
+                        }
+                        .text {
+                            display: inline;
+                            line-height: 28px;
+                        }
+                    }
+                }
+            }
+            .right {
+                .case-img {
+                    overflow: hidden;
+                    border-radius: 10px;
+                    img {
+                        display: block;
+                        border-radius: 10px;
+                        @include css3-prefix('transition','all .4s linear');
+                        @include css3-prefix('transform', 'scale(1)');
+                    }
+                }
+            }
+        }
+    }
+}
